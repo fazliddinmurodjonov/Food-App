@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.androiddatabaselesson2foodapp.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_addFoodFragment"
+            app:destination="@id/addFoodFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_menuFoodFragment"
+            app:destination="@id/menuFoodFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addFoodFragment"
+        android:name="com.example.androiddatabaselesson2foodapp.AddFoodFragment"
+        android:label="fragment_add_food"
+        tools:layout="@layout/fragment_add_food" />
+    <fragment
+        android:id="@+id/menuFoodFragment"
+        android:name="com.example.androiddatabaselesson2foodapp.MenuFoodFragment"
+        android:label="fragment_menu_food"
+        tools:layout="@layout/fragment_menu_food" >
+        <action
+            android:id="@+id/action_menuFoodFragment_to_aboutFoodFragment"
+            app:destination="@id/aboutFoodFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/aboutFoodFragment"
+        android:name="com.example.androiddatabaselesson2foodapp.AboutFoodFragment"
+        android:label="fragment_about_food"
+        tools:layout="@layout/fragment_about_food" />
+</navigation>
